@@ -65,4 +65,76 @@ class OperatorsTest extends TestCase {
         // Validación
         $this->assertIsInt($integerValue);
     }
+
+    /**
+     * @test
+     */
+    public function declaresEquals(){
+        // Preparación del test
+        $variable = new Operator();
+        // Ejecución del test
+        $igual = $variable->declareAsign();
+        // Validación
+        $this->assertEquals($igual,5);
+    }
+
+    /**
+     * @test
+     */
+    public function declaresNotEquals(){
+        // Preparación del test
+        $variable = new Operator();
+        // Ejecución del test
+        $igual = $variable->declareAsign();
+        // Validación
+        $this->assertNotEquals($igual,3);
+    }
+
+    /**
+     * @test
+     */
+    public function declaresGreater(){
+        // Preparación del test
+        $variable = new Operator();
+        // Ejecución del test
+        $igual = $variable->declareGreater();
+        // Validación
+        $this->assertIsBool($igual);
+    }
+
+    /**
+     * @test
+     */
+    public function declaresLess(){
+        // Preparación del test
+        $variable = new Operator();
+        // Ejecución del test
+        $igual = $variable->declareLess();
+        // Validación
+        $this->assertIsBool($igual);
+    }
+
+    /**
+     * @test
+     */
+    public function declaresLessEqual(){
+        // Preparación del test
+        $variable = new Operator();
+        // Ejecución del test
+        $igual = $variable->declareLessEqual();
+        // Validación
+        $this->assertIsBool($igual);
+    }
+
+    /**
+     * @test
+     */
+    public function declaresGreaterEqual(){
+        // Preparación del test
+        $variable = new Operator();
+        // Ejecución del test
+        $igual = $variable->declareGreaterEqual();
+        // Validación
+        $this->assertIsBool($igual);
+    }
 }
