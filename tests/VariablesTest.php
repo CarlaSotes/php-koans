@@ -73,9 +73,9 @@ class VariablesTest extends TestCase{
         // Preparación del test
         $variable = new Variable();
         // Ejecución del test
-        $intNullValue = $variable->declareDifferentValue($variable);
+        $intDiffValue = $variable->declareDifferentValue(3);
         // Validación
-        $this->assertNotSame($intNullValue);
+        $this->assertNotSame(7, $intDiffValue); // esperamos un 6
     }
 
     /**
