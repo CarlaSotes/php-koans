@@ -31,9 +31,7 @@ class StringVariables {
      * @return string
      */
     public function declareConcatenateStrings() {
-        $string1 = "hola";
-        $string2 = "adios";
-        $concatenado = $string1 . $string2;
+        $concatenado = "hola" . "adios";
         return $concatenado;
     }
 
@@ -47,9 +45,50 @@ class StringVariables {
         return $concatenado;
     }
 
+    /**
+     * @return string
+     */
     public function declareAppendEndOfString() {
         $string = "Hola ";
         $string .= "Mundo!";
         return $string;
+    }
+
+    /**
+     * @return int
+     */
+    public function declareLengthOfString() {
+        $tamanio = strlen("hola");
+        return $tamanio;
+    }
+
+    /**
+     * @return int|string[]
+     */
+    public function declareCountWordsInAString():int {
+        $contar = str_word_count("hola que tal");
+        return $contar;
+    }
+
+    /**
+     * @return string
+     */
+    public function declareReverseAString():string {
+        $revertir = strrev("hola mundo");
+        return  $revertir;
+    }
+
+    /**
+     * @param $palabra
+     * @return bool
+     */
+    public function declareSearch($palabra):bool {
+        $contiene = strpos($palabra,"hola que tal");
+        return $contiene;
+    }
+
+    public function declareReplace():string {
+        $remplazar = str_replace("hola", "adios", "hola mundo");
+        return $remplazar;
     }
 }

@@ -77,4 +77,64 @@ class StringsTest extends TestCase {
         // Validación
         $this->assertIsString($append);
     }
+
+    /**
+     * @test
+     */
+    public function declaresLengthOfString(){
+        // Preparación del test
+        $variable = new StringVariables();
+        // Ejecución del test
+        $num = $variable->declareLengthOfString();
+        // Validación
+        $this->assertIsInt($num);
+    }
+
+    /**
+     * @test
+     */
+    public function declarescountWordsInAString(){
+        // Preparación del test
+        $variable = new StringVariables();
+        // Ejecución del test
+        $num = $variable->declareCountWordsInAString();
+        // Validación
+        $this->assertIsInt($num);
+    }
+
+    /**
+     * @test
+     */
+    public function declaresReverseAString(){
+        // Preparación del test
+        $variable = new StringVariables();
+        // Ejecución del test
+        $rev = $variable->declareReverseAString();
+        // Validación
+        $this->assertIsString($rev);
+    }
+
+    /**
+     * @test
+     */
+    public function declaresSearch(){
+        // Preparación del test
+        $variable = new StringVariables();
+        // Ejecución del test
+        $find = $variable->declareSearch("hola");
+        // Validación
+        $this->assertIsBool($find);
+    }
+
+    /**
+     * @test
+     */
+    public function declaresReplace(){
+        // Preparación del test
+        $variable = new StringVariables();
+        // Ejecución del test
+        $find = $variable->declareReplace();
+        // Validación
+        $this->assertIsString($find);
+    }
 }
